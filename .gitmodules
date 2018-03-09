@@ -1,28 +1,28 @@
 [submodule "salt_stack/salt/boss-tools/files/boss-tools.git"]
 	path = salt_stack/salt/boss-tools/files/boss-tools.git
-	url = ../boss-tools.git
-	branch = master	
+	url = https://github.com/jhuapl-boss/boss-tools.git
+	branch = master
 [submodule "salt_stack/salt/boss/files/boss.git"]
 	path = salt_stack/salt/boss/files/boss.git
-	url = ../boss.git
-	branch = master	
+	url = https://github.com/jhuapl-boss/boss.git
+	branch = master
 [submodule "salt_stack/salt/spdb/files/spdb.git"]
 	path = salt_stack/salt/spdb/files/spdb.git
-	url = ../spdb.git
-	branch = master	
+	url = https://github.com/jhuapl-boss/spdb.git
+	branch = master
 [submodule "salt_stack/salt/ndingest/files/ndingest.git"]
 	path = salt_stack/salt/ndingest/files/ndingest.git
-	url = ../ndingest.git
+	url = https://github.com/jhuapl-boss/ndingest.git
 	branch = master
 [submodule "salt_stack/salt/ingest-client/files/ingest-client.git"]
-        path = salt_stack/salt/ingest-client/files/ingest-client.git
-	url = ../ingest-client.git
+      path = salt_stack/salt/ingest-client/files/ingest-client.git
+	url = https://github.com/jhuapl-boss/ingest-client.git
         branch = master
 [submodule "lib/heaviside.git"]
 	path = lib/heaviside.git
-	url = ../heaviside.git
+	url = https://github.com/jhuapl-boss/heaviside.git
 	branch = master
 [submodule "cloud_formation/lambda/dynamodb-lambda-autoscale"]
 	path = cloud_formation/lambda/dynamodb-lambda-autoscale
-	url = ../dynamodb-lambda-autoscale.git
+	url = https://github.com/jhuapl-boss/dynamodb-lambda-autoscale.git
 	branch = integration

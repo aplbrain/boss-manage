@@ -70,8 +70,8 @@ PROD_LAMBDA_SERVER = "54.210.116.141"
 # deployment package.
 #PROD_LAMBDA_SERVER = "52.55.121.6"
 
-DEV_ACCOUNT = "256215146792"
-DEV_DOMAIN = "thebossdev.io"
+DEV_ACCOUNT = "438004392447"
+DEV_DOMAIN = "thebosssaber.io"
 DEV_LAMBDA_BUCKET = "boss-lambda-env"
 DEV_LAMBDA_SERVER = "52.23.27.39"
 

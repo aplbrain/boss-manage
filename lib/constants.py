@@ -19,7 +19,7 @@ from .cloudformation import get_scenario
 # Region api is created in.  Later versions of boto3 should allow us to
 # extract this from the session variable.  Hard coding for now.
 REGION = 'us-east-1'
-INCOMING_SUBNET = "52.7.186.170"  # boss-bastion elastic IP
+INCOMING_SUBNET = "52.7.186.170/32"  # boss-bastion elastic IP
 
 PRODUCTION_MAILING_LIST = "ProductionSaberMailingList"
 PRODUCTION_BILLING_TOPIC = "ProductionBillingList"

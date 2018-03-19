@@ -71,11 +71,7 @@ PROD_LAMBDA_SERVER = "54.210.116.141"
 #PROD_LAMBDA_SERVER = "52.55.121.6"
 
 DEV_ACCOUNT = "438004392447"
-<<<<<<< HEAD
 DEV_DOMAIN = "bossdb.org"
-=======
-DEV_DOMAIN = "thebosssaber.io"
->>>>>>> c3adda3a4d79487ba26be8f6241d451eccc7dff3
 DEV_LAMBDA_BUCKET = "boss-lambda-env"
 DEV_LAMBDA_SERVER = "52.23.27.39"
 

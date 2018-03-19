@@ -23,7 +23,7 @@ INCOMING_SUBNET = "52.7.186.170"  # boss-bastion elastic IP
 
 PRODUCTION_MAILING_LIST = "ProductionSaberMailingList"
 PRODUCTION_BILLING_TOPIC = "ProductionBillingList"
-MAX_ALARM_DOLLAR = 30  # Maximum size of alarms in $1,000s
+MAX_ALARM_DOLLAR = 100  # Maximum size of alarms in $100s
 
 
 ########################

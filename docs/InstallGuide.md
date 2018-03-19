@@ -38,41 +38,6 @@ Under the main account - (logged in with the email address)
   * Check "Receive Billing Alerts" 
   * Save Preferences
 
-####Go into IAM 
-* Create Users
-* Create group aplAdminGroup and add Policy AdministratorAccess
-* Create new Role DeveloperAccess  (only used if you have a Developer account)
-    * select "Role for Cross-Account Access" 
-    * select "Provide access between AWS accounts you own" 
-    * enter in the developer account number and continue
-    * enter AdministrativeAccess
-* In Developer Account create two new policies.
-    * aplDenyAssumeRoleInProduction
-```
-  {
-    "Version": "2012-10-17",
-    "Statement": {
-        "Effect": "Deny",
-        "Action": "sts:AssumeRole",
-        "Resource": "arn:aws:iam::451493790433:role/DeveloperAccess"
-    }
-  }
-```
-    * aplAllowAssumeRoleInProduction
-```
-  {
-    "Version": "2012-10-17",
-    "Statement": {
-        "Effect": "Allow",
-        "Action": "sts:AssumeRole",
-        "Resource": "arn:aws:iam::451493790433:role/DeveloperAccess"
-    }
-  }
-```
-* Now Create two new Groups and add policies above to them.
-    * aplDenyProductionAccountAccess
-    * aplProductionAccountAccess
-    
 * under "Account Settings" setup appropriate password settings
 
 *Note: you will also need access to the API keys for the AWS account.*

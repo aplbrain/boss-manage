@@ -66,6 +66,7 @@ def locate_ami(aws_config):
 
     with open(aws_config) as fh:
         cred = json.load(fh)
+        print(cred)
         session = Session(aws_access_key_id = cred["aws_access_key"],
                           aws_secret_access_key = cred["aws_secret_key"],
                           region_name = 'us-east-1')

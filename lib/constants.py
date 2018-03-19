@@ -19,7 +19,7 @@ from .cloudformation import get_scenario
 # Region api is created in.  Later versions of boto3 should allow us to
 # extract this from the session variable.  Hard coding for now.
 REGION = 'us-east-1'
-INCOMING_SUBNET = "52.3.13.189/32"  # microns-bastion elastic IP
+INCOMING_SUBNET = "52.7.186.170"  # boss-bastion elastic IP
 
 PRODUCTION_MAILING_LIST = "ProductionSaberMailingList"
 PRODUCTION_BILLING_TOPIC = "ProductionBillingList"
@@ -28,8 +28,8 @@ MAX_ALARM_DOLLAR = 30  # Maximum size of alarms in $1,000s
 
 ########################
 # Lambda Build Server
-PROD_LAMBDA_KEY = 'microns-bastion20151117'
-DEV_LAMBDA_KEY = 'microns-bastion20151117'
+PROD_LAMBDA_KEY = 'boss-bastion-20180315'
+DEV_LAMBDA_KEY = 'boss-bastion-20180315'
 
 
 ########################

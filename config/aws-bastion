@@ -1,5 +1,5 @@
 {
     "aws_bastion_ip": "52.7.186.170",
     "aws_bastion_user": "ubuntu",
-    "aws_bastion_priv_key_file": "/Users/rodrilm2/.ssh/boss-bastion-20180315.pem"
+    "aws_bastion_priv_key_file": "./boss-bastion-20180315.pem"
 }

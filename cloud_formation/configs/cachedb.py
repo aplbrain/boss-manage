@@ -248,10 +248,10 @@ def post_init(session, domain):
     add_tile_bucket_trigger(session, domain)
 
     # Tell Scalyr to get CloudWatch metrics for these instances.
-    names = AWSNames(domain)
-    instances = [names.cache_manager]
-    scalyr.add_instances_to_scalyr(
-        session, const.REGION, instances)
+    # names = AWSNames(domain)
+    # instances = [names.cache_manager]
+    # scalyr.add_instances_to_scalyr(
+    #     session, const.REGION, instances)
 
 def add_tile_bucket_trigger(session, domain):
     """Trigger MultiLambda when file uploaded to tile bucket.

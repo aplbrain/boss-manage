@@ -14,9 +14,9 @@
     },
     "AttachedManagedPolicies": [
       "arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM",
-      "arn:aws:iam::451493790433:policy/aplPopulateUploadQueue",
-      "arn:aws:iam::451493790433:policy/aplDeleteCuboid",
-      "arn:aws:iam::451493790433:policy/aplResolutionHierarchy",
+      "arn:aws:iam::438004392447:policy/aplPopulateUploadQueue",
+      "arn:aws:iam::438004392447:policy/aplDeleteCuboid",
+      "arn:aws:iam::438004392447:policy/aplResolutionHierarchy",
       "arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess"
     ],
     "InstanceProfileList": [
@@ -112,6 +112,90 @@
           "Action": "sts:AssumeRole",
           "Effect": "Allow",
           "Principal": {
+            "Service": "autoscaling.amazonaws.com"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/aws-service-role/AutoScalingServiceRolePolicy"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/aws-service-role/autoscaling.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForAutoScaling",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "ecs.amazonaws.com"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/aws-service-role/AmazonECSServiceRolePolicy"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/aws-service-role/ecs.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForECS",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "elasticache.amazonaws.com"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/aws-service-role/ElastiCacheServiceRolePolicy"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/aws-service-role/elasticache.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForElastiCache",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "rds.amazonaws.com"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/aws-service-role/AmazonRDSServiceRolePolicy"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/aws-service-role/rds.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForRDS",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
             "Service": "ec2.amazonaws.com"
           }
         }
@@ -133,6 +217,32 @@
     ],
     "Path": "/",
     "RoleName": "cachemanager",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "vpc-flow-logs.amazonaws.com"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
+    ],
+    "InstanceProfileList": [
+      {
+        "InstanceProfileName": "CloudWatchFullAccesss",
+        "Path": "/"
+      }
+    ],
+    "Path": "/",
+    "RoleName": "CloudWatchFullAccesss",
     "RolePolicyList": []
   },
   {
@@ -176,6 +286,75 @@
       "Version": "2012-10-17"
     },
     "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole"
+    ],
+    "InstanceProfileList": [
+      {
+        "InstanceProfileName": "DataPipelineDefaultResourceRole",
+        "Path": "/"
+      }
+    ],
+    "Path": "/",
+    "RoleName": "DataPipelineDefaultResourceRole",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": [
+              "elasticmapreduce.amazonaws.com",
+              "datapipeline.amazonaws.com"
+            ]
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/",
+    "RoleName": "DataPipelineDefaultRole",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::256215146792:root"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [],
+    "InstanceProfileList": [],
+    "Path": "/",
+    "RoleName": "DeveloperAccess",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "ec2.amazonaws.com"
+          }
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
       "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"
     ],
     "InstanceProfileList": [
@@ -186,6 +365,28 @@
     ],
     "Path": "/",
     "RoleName": "ecsInstanceRole",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "ecs-tasks.amazonaws.com"
+          },
+          "Sid": ""
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/",
+    "RoleName": "ecsTaskWithS3",
     "RolePolicyList": []
   },
   {
@@ -307,7 +508,8 @@
       "Version": "2012-10-17"
     },
     "AttachedManagedPolicies": [
-      "arn:aws:iam::451493790433:policy/aplPopulateUploadQueue"
+      "arn:aws:iam::438004392447:policy/aplPopulateUploadQueue",
+      "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
     ],
     "InstanceProfileList": [],
     "Path": "/",
@@ -471,6 +673,258 @@
           "Action": "sts:AssumeRole",
           "Effect": "Allow",
           "Principal": {
+            "Service": [
+              "apigateway.amazonaws.com",
+              "events.amazonaws.com",
+              "lambda.amazonaws.com"
+            ]
+          },
+          "Sid": ""
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [],
+    "InstanceProfileList": [],
+    "Path": "/",
+    "RoleName": "mesh-server-dev-ZappaLambdaExecutionRole",
+    "RolePolicyList": [
+      {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:logs:*:*:*"
+            },
+            {
+              "Action": [
+                "lambda:InvokeFunction"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "*"
+              ]
+            },
+            {
+              "Action": [
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "*"
+              ]
+            },
+            {
+              "Action": [
+                "ec2:AttachNetworkInterface",
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeInstances",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DetachNetworkInterface",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:ResetNetworkInterfaceAttribute"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:s3:::*"
+            },
+            {
+              "Action": [
+                "kinesis:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:kinesis:*:*:*"
+            },
+            {
+              "Action": [
+                "sns:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:sns:*:*:*"
+            },
+            {
+              "Action": [
+                "sqs:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:sqs:*:*:*"
+            },
+            {
+              "Action": [
+                "dynamodb:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:dynamodb:*:*:*"
+            },
+            {
+              "Action": [
+                "route53:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "zappa-permissions"
+      }
+    ]
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": [
+              "apigateway.amazonaws.com",
+              "events.amazonaws.com",
+              "lambda.amazonaws.com"
+            ]
+          },
+          "Sid": ""
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [],
+    "InstanceProfileList": [],
+    "Path": "/",
+    "RoleName": "meshparty-dev-ZappaLambdaExecutionRole",
+    "RolePolicyList": [
+      {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:logs:*:*:*"
+            },
+            {
+              "Action": [
+                "lambda:InvokeFunction"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "*"
+              ]
+            },
+            {
+              "Action": [
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "*"
+              ]
+            },
+            {
+              "Action": [
+                "ec2:AttachNetworkInterface",
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeInstances",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DetachNetworkInterface",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:ResetNetworkInterfaceAttribute"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:s3:::*"
+            },
+            {
+              "Action": [
+                "kinesis:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:kinesis:*:*:*"
+            },
+            {
+              "Action": [
+                "sns:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:sns:*:*:*"
+            },
+            {
+              "Action": [
+                "sqs:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:sqs:*:*:*"
+            },
+            {
+              "Action": [
+                "dynamodb:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:dynamodb:*:*:*"
+            },
+            {
+              "Action": [
+                "route53:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "zappa-permissions"
+      }
+    ]
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "monitoring.rds.amazonaws.com"
+          },
+          "Sid": ""
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [
+      "arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole"
+    ],
+    "InstanceProfileList": [],
+    "Path": "/",
+    "RoleName": "rds-monitoring-role",
+    "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
             "Service": "events.amazonaws.com"
           },
           "Sid": ""
@@ -486,6 +940,121 @@
     "Path": "/",
     "RoleName": "sandytest",
     "RolePolicyList": []
+  },
+  {
+    "AssumeRolePolicyDocument": {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": [
+              "apigateway.amazonaws.com",
+              "events.amazonaws.com",
+              "lambda.amazonaws.com"
+            ]
+          },
+          "Sid": ""
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "AttachedManagedPolicies": [],
+    "InstanceProfileList": [],
+    "Path": "/",
+    "RoleName": "simple-dev-ZappaLambdaExecutionRole",
+    "RolePolicyList": [
+      {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:logs:*:*:*"
+            },
+            {
+              "Action": [
+                "lambda:InvokeFunction"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "*"
+              ]
+            },
+            {
+              "Action": [
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "*"
+              ]
+            },
+            {
+              "Action": [
+                "ec2:AttachNetworkInterface",
+                "ec2:CreateNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DescribeInstances",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DetachNetworkInterface",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:ResetNetworkInterfaceAttribute"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:s3:::*"
+            },
+            {
+              "Action": [
+                "kinesis:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:kinesis:*:*:*"
+            },
+            {
+              "Action": [
+                "sns:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:sns:*:*:*"
+            },
+            {
+              "Action": [
+                "sqs:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:sqs:*:*:*"
+            },
+            {
+              "Action": [
+                "dynamodb:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:dynamodb:*:*:*"
+            },
+            {
+              "Action": [
+                "route53:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "zappa-permissions"
+      }
+    ]
   },
   {
     "AssumeRolePolicyDocument": {
@@ -554,8 +1123,8 @@
       "Version": "2012-10-17"
     },
     "AttachedManagedPolicies": [
-      "arn:aws:iam::451493790433:policy/service-role/AWSLambdaS3ExecutionRole-2a0110ca-6e60-4f94-8510-fdaf9ddfb583",
-      "arn:aws:iam::451493790433:policy/service-role/AWSLambdaBasicExecutionRole-28085153-2e10-4740-8166-7090f779f1c7"
+      "arn:aws:iam::438004392447:policy/service-role/AWSLambdaS3ExecutionRole-2a0110ca-6e60-4f94-8510-fdaf9ddfb583",
+      "arn:aws:iam::438004392447:policy/service-role/AWSLambdaBasicExecutionRole-28085153-2e10-4740-8166-7090f779f1c7"
     ],
     "InstanceProfileList": [],
     "Path": "/service-role/",

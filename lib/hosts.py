@@ -63,8 +63,8 @@ LAMBDA_SUBNETS = 16 # TODO merge with constants.py variable of the same name
 # DP TODO: Migrate to constants.py
 PROD_ACCOUNT = "438004392447"
 PROD_DOMAIN = "bossdb.org"
-PROD_LAMBDA_BUCKET = "boss-lambda-prod-env"
-PROD_LAMBDA_SERVER = "54.210.116.141"
+PROD_LAMBDA_BUCKET = "boss-lambda-bossdb-env"
+PROD_LAMBDA_SERVER = "18.233.113.32"
 
 # Below is the old lambda server that targets Python 3.4 in the lambda
 # deployment package.
@@ -72,8 +72,8 @@ PROD_LAMBDA_SERVER = "54.210.116.141"
 
 DEV_ACCOUNT = "438004392447"
 DEV_DOMAIN = "bossdb.org"
-DEV_LAMBDA_BUCKET = "boss-lambda-env"
-DEV_LAMBDA_SERVER = "52.23.27.39"
+DEV_LAMBDA_BUCKET = "boss-lambda-bossdb-env"
+DEV_LAMBDA_SERVER = "18.233.113.32"
 
 # Below is the old lambda server that targets Python 3.4 in the lambda
 # deployment package.

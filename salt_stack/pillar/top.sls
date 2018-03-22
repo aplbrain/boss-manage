@@ -1,6 +1,4 @@
 base:
-  '*':
-    - scalyr
 
   'endpoint*':
     - endpoint

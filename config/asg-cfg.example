@@ -1,0 +1,7 @@
+{
+    "activities": "ActivitiesBoss-Activities-E6X20YHQQ11M",
+    "endpoint": "ApiBoss-Endpoint-IMTWI1VWZI8Q",
+    "auth": "CoreBoss-Auth-JPKNUIQQLJ0C",
+    "vault": "CoreBoss-Vault-18KO5BYLC7A48",
+    "consul": "CoreBoss-Consul-F00DXLI9BJHQ"
+}

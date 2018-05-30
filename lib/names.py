@@ -68,7 +68,6 @@ class AWSNames(object):
         "multi_lambda": "multiLambda",
         "s3_index": "s3index",
         "ingest_bucket": "ingestbossdb",
-        "tile_bucket": "tilesbossdb",
         "tile_index": "tileindex",
         "id_index": "idIndex",
         "id_count_index": "idCount",

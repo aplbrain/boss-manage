@@ -137,7 +137,7 @@ def create_config(session, domain):
             "DNSLambdaExecute"]
 
     SCENARIO = os.environ["SCENARIO"]
-    USE_DB = SCENARIO in ("production", "ha-development",)
+    USE_DB = SCENARIO in ("production", "ha-development", "development")  # SH 20180530 Update for Saber so it gets a Database.
     # Problem: If development scenario uses a local DB. If the auth server crashes
     #          and is auto restarted by the autoscale group then the new auth server
     #          will not have any of the previous configuration, because the old DB

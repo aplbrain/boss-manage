@@ -22,22 +22,12 @@ import argparse
 import os
 
 import alter_path
-from lib import aws
+from lib import aws, utils
 
 def main():
-    # read arguments from the command line and
-    # check whether at least two elements were entered
 
-    yes = {'yes','y', 'ye', ''}
-    no = {'no','n'}
-
-    #Check the action is desired.
-    sys.stdout.write("Are you sure you want to proceed? [y/n]")
-    choice = input().lower()
-    if choice in no:
-       print("Action cancelled.")
-
-    elif choice in yes:
+    choice = utils.get_user_confirm("Are you sure you want to switch the boss?")
+    if choice:
         if len(sys.argv) < 2:
             sys.exit(0)
         else:
@@ -52,9 +42,10 @@ def main():
             stopInstances()
         else:
             print("Usage: python bossSwitch.py {on|off}\n")
-
+    elif choice == False:
+        print("Action cancelled")
     else:
-       print("Please respond with 'yes' or 'no'")
+        print("Please respond with 'yes' or 'no'")
 
 #Executed actions
 def startInstances():

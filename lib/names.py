@@ -70,7 +70,7 @@ class AWSNames(object):
         "ingest_bucket": "ingestbossdb",
         "tile_index": "tileindex",
         "id_index": "idIndex",
-        "tile_bucket":"tiles",
+        "tile_bucket":"tilesbossdb",
         "id_count_index": "idCount",
         "s3flush_queue": "S3flush",
         "deadletter_queue": "Deadletter",
